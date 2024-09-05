@@ -1,0 +1,97 @@
+body {
+      background: #1c1c1c;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .clock {
+      display: flex;
+      gap: 10px;
+      font-size: 0;
+      flex-wrap: wrap;
+    }
+
+    .digit {
+      width: 45px; /*60 px*/
+      height: 90px; /*120px*/
+      position: relative;
+    }
+
+    .segment {
+      background: #1c1c1c;
+      border-radius: 3px;
+      position: absolute;
+      opacity: 0.2;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .segment.on {
+      background: #FF4C4C;
+      opacity: 1;
+      box-shadow: 0 0 10px rgba(255, 76, 76, 0.8);
+    }
+
+    .separator {
+      width: 15px;
+      height: 15px;
+      background: #FF4C4C;
+      border-radius: 50%;
+      align-self: center;
+    }
+
+    
+    .digit .segment:nth-child(1) {
+      top: 7px;
+      left: 7px;
+      right: 7px;
+      height: 7px;
+    }
+
+    .digit .segment:nth-child(2) {
+      top: 7px;
+      right: 7px;
+      width: 7px;
+      height: calc(50% - 11px);
+    }
+
+    .digit .segment:nth-child(3) {
+      bottom: 7px;
+      right: 7px;
+      width: 7px;
+      height: calc(50% - 11px);
+    }
+
+    .digit .segment:nth-child(4) {
+      bottom: 7px;
+      left: 7px;
+      right: 7px;
+      height: 7px;
+    }
+
+    .digit .segment:nth-child(5) {
+      bottom: 7px;
+      left: 7px;
+      width: 7px;
+      height: calc(50% - 11px);
+    }
+
+    .digit .segment:nth-child(6) {
+      top: 7px;
+      left: 7px;
+      width: 7px;
+      height: calc(50% - 11px);
+    }
+
+    .digit .segment:nth-child(7) {
+      top: 50%;
+      left: 7px;
+      right: 7px;
+      height: 7px;
+      margin-top: -3.5px;
+    }
